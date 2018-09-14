@@ -92,3 +92,35 @@ var model = {
         return false;
     } 
 };
+
+var view = {
+    displayMessage: function(msg) {
+        var messageArea = document.getElementById("messageArea");
+        messageArea.innerHTML = msg;
+    },
+
+    displayHit: function(location) {
+        var cell = document.getElementById(location);
+        cell.setAttribute('class', 'hit');
+    },
+
+    displayMiss: function(location) {
+        var cell = document.getElementById(location);
+        cell.setAttribute('class', 'miss');
+    }
+};
+
+var controller = {
+    guesses: 0,
+
+    processGuess: function(guess) {
+        var location = parseGuess(guess);
+        if (location) {
+            this.guesses++;
+            var hit = model.fire(location);
+            if (hit && model.shipsSunk === model.numShips) {
+                view.displayMessage(`You sunk all the battleships in ${this.guesses} guesses!`);
+            }
+        }
+    }
+};
