@@ -19,7 +19,7 @@ var model = {
                 view.displayMessage("You have already hit this location!")
                 return true;
             } else if (index >= 0) {
-                ship.hits[index] = "hits";
+                ship.hits[index] = "hit";
                 view.displayHit(guess);
                 view.displayMessage("HIT!");
 
@@ -80,7 +80,7 @@ var model = {
         return newShipLocations;
     },
 
-    collision: function() {
+    collision: function(locations) {
         for (var i = 0; i < this.numShips; i++) {
             var ship = this.ships[i];
             for (var j = 0; j < locations.length; j++) {

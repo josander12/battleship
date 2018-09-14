@@ -4,11 +4,10 @@ body {
 
 div#board {
     position: relative;
-    width: 70vw;
+    width: 90vw;
     height: 95vh;
     margin: auto;
     background: url("imgs/board.jpg") no-repeat center center;
-    background-size: 70%;
 }
 
 div#messageArea {
@@ -29,8 +28,8 @@ div#messageArea {
 table {
     border-spacing: 0px;
     position: absolute;
-    left: 172px;
-    top: 98px;
+    left: 310px;
+    top: 50px;
 }
 
 td {
