@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <title>Battleship</title>
+  <link rel="stylesheet" href="battleship.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300|Roboto+Slab:700" rel="stylesheet">
+</head>
+<body>
+
+    <div id="intro-wrapper">
+
+        <h1>Battleship</h1>
+
+        <div id="introduction"></div>
+
+        <a href="battleship.html"><button id="play">Let's Play!</button></a>
+
+    </div>
+    
+
+    <script>
+
+        var i = 0;
+        var txt = 'Welcome to Battleship!  This is a simpler version of the original game.  Simply fire until you have sunk all of the enemy ships, and see how quickly you can find them all. There are only 3 ships, and each of the ships are only three spaces long.  Feel free to refresh the page and play as many times as you would like, as the ships will be generated in different places each time.  Good luck!';
+        var speed = 50;
+
+        function typeWriter() {
+            if (i < txt.length) {
+                document.getElementById("introduction").innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+
+        typeWriter();
+    </script>
+    
+  
+</body>
+</html>

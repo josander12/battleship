@@ -1,0 +1,104 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #000;
+    height: 100vh;
+    width: 100vw;
+    font-size: 62.5%;
+}
+
+div#board {
+    position: relative;
+    width: 90vw;
+    height: 95vh;
+    margin: auto;
+    background: url("imgs/board.jpg") no-repeat center center;
+    background-size: contain;
+    font-size: 1.6vw;
+}
+
+div#messageArea {
+    position: absolute;
+    bottom: 10vh;
+    right: 0px;
+    color: rgb(51, 204, 51);
+}
+
+.hit {
+    background: url("imgs/ship.png") no-repeat center center;
+    background-size: contain;
+}
+
+.miss {
+    background: url("imgs/miss.png") no-repeat center center;
+    background-size: contain;
+}
+
+table {
+    border-spacing: 0px;
+    position: inline-block;
+    margin: auto;
+    padding-top: 10vh;
+}
+
+td {
+    width: calc( 100vh / 9.5);
+    height: calc( 100vh / 9.3);
+}
+
+form {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    padding: 15px;
+    background-color: rgb(51, 204, 51);
+    border-radius: 3px;
+}
+
+form input {
+    background-color: rgb(128, 204, 51);
+    border-color: rgb(51, 204, 51);
+    font-size: 1em;
+}
+
+#fireButton {
+    background-color: rgb(132, 255, 9);
+}
+
+#intro-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Roboto Mono', monospace;
+    color: rgb(128, 204, 51);
+}
+
+h1 {
+    font-family: 'Roboto Slab', serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 10vh;
+    padding: 10vh;
+}
+#introduction {
+    margin: 0 20vh 10vh 20vh;
+    font-size: 3vh;
+}
+
+#play {
+    font-size: 5vh;
+    background-color: rgb(128, 204, 51);
+    border-radius: 3px;
+    padding: 5px;
+    transition: .2s;
+
+    &:hover {
+        transform: scale(1.2);
+        background-color: rgb(132, 255, 9);
+    }
+}
